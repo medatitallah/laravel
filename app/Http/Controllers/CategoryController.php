@@ -20,6 +20,16 @@ class CategoryController extends Controller
         }
     }
 
+    //afficher la liste
+    public function list()
+    {
+        //recuperer les categories de la BD
+        $categories = Category::all();
+        
+
+        return view('liste')->with('categories', $categories);
+    }
+
     // permet d'afficher la page html form.blade.html
     public function ShowFromCategory()
     {
