@@ -22,4 +22,7 @@ Route::get('/', function () {
 Route::get('/page1', [PageController::class, 'afficherpage1']);
 Route::get('/about', [PageController::class, 'afficherpage2']);
 Route::get('/affichage/donnees', [PageController::class, 'donnees']);
-Route::get('/category/add', [CategoryController::class, 'AddCategory']);
+
+Route::post('/category/add', [CategoryController::class, 'AddCategory']);
+
+Route::get('/category/form', [CategoryController::class, 'ShowFromCategory']);
