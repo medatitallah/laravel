@@ -9,7 +9,10 @@ class CategoryController extends Controller
 {
     public function AddCategory(Request $request)
     {
-
+        $request->validate(
+            ['nom' =>'required',
+            'description'=>'required']
+        );
         $c = new Category();
         $c->name = $request->nom;
         $c->description = $request->description;

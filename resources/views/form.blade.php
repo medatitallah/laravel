@@ -12,11 +12,11 @@
     @csrf
     <div class="form-group">
         <label for="">Nom de la categorie</label>
-        <input type="text" name="nom" class="form-control">
+        <input type="text" name="nom" class="form-control" > 
     </div>
     <div class="form-group">
         <label for="">Description de la categorie</label>
-        <textarea name="description" class="form-control"> </textarea>
+        <textarea name="description" class="form-control"  > </textarea>
     </div>
     <button type="submit" class="btn btn-primary"> Ajouter</button>
 </form>
