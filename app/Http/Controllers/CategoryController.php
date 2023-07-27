@@ -37,7 +37,7 @@ class CategoryController extends Controller
     {
         $categorie= Category::find($id);
         if ($categorie->delete()) {
-            return redirect('/category/list');
+            return redirect('/category/list')->with('msg', 'votre categorie supprimer avec succes');
         } else {
             return 'err404 dajout';
         }

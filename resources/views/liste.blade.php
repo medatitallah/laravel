@@ -12,7 +12,11 @@
     <h1 class="text-center">Liste des categories</h1>
     </div>
 
-
+@if($message = Session::get('msg')) 
+    <div class="alert alert-success">
+        {{$message}}
+    </div>
+@endif
         @foreach($categories as $category)
 
             <h1>{{$category->name}}</h1>
