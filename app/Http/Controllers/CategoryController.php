@@ -33,6 +33,15 @@ class CategoryController extends Controller
         return view('liste')->with('categories', $categories);
     }
 
+    public function delete($id)
+    {
+        $categorie= Category::find($id);
+        if ($categorie->delete()) {
+            return redirect('/category/list');
+        } else {
+            return 'err404 dajout';
+        }
+    }
     // permet d'afficher la page html form.blade.html
     public function ShowFromCategory()
     {

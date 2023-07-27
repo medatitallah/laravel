@@ -16,7 +16,8 @@
         @foreach($categories as $category)
 
             <h1>{{$category->name}}</h1>
-            {{$category->description}}
+            <p>{{$category->description}}</p>
+            <a class="btn btn-danger" href="/category/delete/{{$category->id}}">Supprimer</a>
             <hr>
         @endforeach
 

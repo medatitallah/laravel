@@ -25,3 +25,4 @@ Route::get('/affichage/donnees', [PageController::class, 'donnees']);
 Route::post('/category/add', [CategoryController::class, 'AddCategory']);
 Route::get('/category/form', [CategoryController::class, 'ShowFromCategory']);
 Route::get('/category/list', [CategoryController::class, 'list']);
+Route::get('/category/delete/{id}', [CategoryController::class, 'delete']);
