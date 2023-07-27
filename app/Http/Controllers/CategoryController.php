@@ -17,7 +17,7 @@ class CategoryController extends Controller
         $c->name = $request->nom;
         $c->description = $request->description;
         if ($c->save()) {
-            return redirect('/category/list');
+            return redirect('/category/list')->with('msg', 'votre categorie ajouter avec succes');;
         } else {
             return 'err404 dajout';
         }
