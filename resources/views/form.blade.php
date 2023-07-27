@@ -12,16 +12,16 @@
     @csrf
     <div class="form-group">
         <label for="">Nom de la categorie</label>
-        <input type="text" name="nom" class="form-control" > 
+        <input type="text" name="nom" class="form-control" value="{{@old('nom')}}"> 
         @error('nom')
-            {{$message}}
+        <span class="text-danger">{{$message}}</span>
         @enderror
     </div>
     <div class="form-group">
         <label for="">Description de la categorie</label>
-        <textarea name="description" class="form-control"  > </textarea>
+        <textarea name="description" class="form-control" value="{{@old('description')}}" > </textarea>
         @error('description')
-            {{$message}}
+            <span class="text-danger">{{$message}}</span>
         @enderror
     </div>
     <button type="submit" class="btn btn-primary"> Ajouter</button>
